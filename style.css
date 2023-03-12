@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+  --primary-color: #151515;
+  --secondary-color: #9f9f9f;
+  --mark-color: #4DE2A0;
+}
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+
+}
+
+header,
+footer {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 950px;
+  padding: 0 25px;
+  ;
+
+}
+
+main {
+  margin: 0 25px;;
+}
+
+main section{
+  max-width: 900px;
+  display: flex;
+}
+
+.social-nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+.social-nav ul li a i{
+  font-size: 22px;
+}
+
+.title-container {
+  display: flex;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.title-container 
+.title-content {
+  width: 60%;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.title-container 
+.title-content h1 {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.title-container 
+.title-content h1 mark {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 4px solid var(--mark-color);
+  
+}
+
+.title-container 
+.title-content p {
+  color: var(--secondary-color);
+  padding-right: 100px;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+
+.title-container 
+.title-content p:nth-child(3){
+  margin-bottom: 40px;
+}
+
+.btn {
+  width: max-content;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding-bottom: .4em;
+  border-bottom: 2px solid var(--mark-color);
+}
+
+.courses-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.courses-container h2{
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.courses-container
+.courses-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.courses-container
+.courses-content
+.courses{
+  color: var(--secondary-color);
+}
+
+.courses-container
+.courses-content
+.courses summary{
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.courses-container
+.courses-content
+.courses p, ul{
+  margin: 15px ;
+  font-size: .9em;
+}
+
+.courses-container
+.courses-content
+.courses ul {
+  padding-left: 15px;
+}
+
+.courses-container
+.courses-content
+.courses ul li{
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+}
+
+.technology-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.technology-container p {
+  margin: 20px 0;
+  color: var(--secondary-color);
+}
+
+.technology-container
+.cursos{
+  color: var(--secondary-color);
+}
+
+.technology-container 
+.list-technology {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.technology-container 
+.list-technology ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.technology-container 
+.list-technology ul li .technology img {
+  width: 80px;
+}
+
+.technology-container 
+.list-technology ul li ul .experience {
+  color: var(--secondary-color);
+  margin-top: 10px;
+}
+
+.projects-container {
+  flex-direction: column;
+}
+
+.projects-container 
+.projects-title-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-container 
+.projects-title-content h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.projects-container 
+.container-cards-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+}
+
+.projects-container 
+.container-cards-projects 
+.card-project {
+  min-width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.projects-container 
+.container-cards-projects 
+.card-project 
+.container-project-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.projects-container 
+.container-cards-projects 
+.card-project 
+.container-project-img img{
+  width: 100%;
+  border-radius: 8px;
+  
+}
+
+.projects-container 
+.container-cards-projects 
+.card-project h3 {
+  font-size: 1.5em;
+}
+
+.projects-container 
+.container-cards-projects 
+.card-project p {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 968px) {
+  .title-container {
+    justify-content: center;
+  }
+
+  .title-container 
+  .title-content {
+    width: 510px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-container 
+  .title-content p {
+    padding: 0;
+  }
+
+  .technology-container 
+  .list-technology ul {
+    justify-content: center;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 420px) {
+  .btn{
+    font-size: .8em;
+  }
+
+  .title-container 
+  .title-content {
+    width: 100%;
+  }
+
+  .title-container 
+  .title-content h1 {
+    font-size: 1.3em;
+  }
+
+  .title-container 
+  .title-content p{
+    margin-bottom: 10px;
+  }
+
+  .courses-container
+  .courses-content
+  .courses ul{
+    padding-left: 5px;
+  }
+
+  .courses-container
+  .courses-content
+  .courses ul li{
+    width: 100%;
+  }
+
+  .technology-container p {
+    text-align: center;
+  }
+
+  .technology-container 
+  .list-technology ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .technology-container 
+  .list-technology ul li .technology {
+    font-size: 1.4em;
+  }
+  
+  .technology-container 
+  .list-technology ul li ul .experience {
+    margin-top: 5px;
+  }
+
+  .projects-container 
+  .projects-title-content h2 {
+    font-size: 1.6em;
+  }
+
+  .projects-container 
+  .container-cards-projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-container 
+  .container-cards-projects 
+  .card-project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .projects-container 
+  .container-cards-projects 
+  .card-project 
+  .container-project-img {
+    height: 440px;
+  }
+}
