@@ -32,7 +32,6 @@ ul {
 body {
   height: 100vh;
   width: 100%;
-  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
@@ -45,30 +44,65 @@ footer {
   width: 100%;
   min-height: 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 950px;
-  padding: 0 25px;
-  ;
-
+  justify-content: center;
+  background-color: var(--primary-color);
+  padding: 0 25px;;
 }
 
 main {
-  margin: 0 25px;;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 main section{
-  max-width: 900px;
+  width: 100%;
+  padding: 0 25px;;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  
+}
+
+.title-container,
+.courses-container,
+.technology-container,
+.projects-container{
+  max-width: 950px;
+  width: 100%;
+}
+
+.header-content,
+.footer-content{
+  width: 950px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .social-nav ul {
   display: flex;
-  gap: 15px;
+  align-content: center;
+  gap: 25px;
 }
 
+.social-nav ul li{
+  display: flex;
+  align-items: center;
+}
 .social-nav ul li a i{
   font-size: 22px;
+  transition: .4s ease;
+}
+
+.social-nav ul li a i:hover{
+  font-size: 30px;
+  color: var(--mark-color);
 }
 
 .title-container {
@@ -119,9 +153,16 @@ main section{
   letter-spacing: .1em;
   padding-bottom: .4em;
   border-bottom: 2px solid var(--mark-color);
+  transition: .4s ease;
+}
+
+.btn:hover{
+  color: var(--mark-color);
+  border-color: #fff;
 }
 
 .courses-container{
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -140,7 +181,7 @@ main section{
 .courses-content{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   margin-bottom: 50px;
 }
@@ -169,6 +210,7 @@ main section{
 .courses-container
 .courses-content
 .courses ul {
+  gap: 20px;
   padding-left: 15px;
 }
 
@@ -186,6 +228,7 @@ main section{
 }
 
 .technology-container p {
+  text-align: center;
   margin: 20px 0;
   color: var(--secondary-color);
 }
@@ -213,12 +256,18 @@ main section{
 .technology-container 
 .list-technology ul li .technology img {
   width: 80px;
+  transition: .4s ease;
+}
+
+.technology-container 
+.list-technology ul li .technology img:hover{
+  transform: scale(1.2);
 }
 
 .technology-container 
 .list-technology ul li ul .experience {
   color: var(--secondary-color);
-  margin-top: 10px;
+
 }
 
 .projects-container {
@@ -228,6 +277,7 @@ main section{
 .projects-container 
 .projects-title-content {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -255,6 +305,7 @@ main section{
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  transition: .4s ease-in-out;
 }
 
 .projects-container 
@@ -265,7 +316,7 @@ main section{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 210px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -274,7 +325,7 @@ main section{
 .card-project 
 .container-project-img img{
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   
 }
 
@@ -319,10 +370,6 @@ main section{
 }
 
 @media (max-width: 550px) {
-  .btn{
-    font-size: .8em;
-  }
-
   .title-container 
   .title-content {
     width: 100%;
@@ -379,7 +426,7 @@ main section{
   .projects-container 
   .container-cards-projects {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
   }
 
   .projects-container 
@@ -396,8 +443,17 @@ main section{
   .container-cards-projects 
   .card-project 
   .container-project-img {
-    height: 440px;
+    height: 550px;
   }
+}
+
+@media(min-width: 900px){
+  .projects-container 
+  .container-cards-projects 
+  .card-project:hover{
+    transform: scale(1.05);
+}
+
 }
 
 @media (max-width: 360px){
