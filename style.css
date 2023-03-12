@@ -318,7 +318,7 @@ main section{
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 550px) {
   .btn{
     font-size: .8em;
   }
