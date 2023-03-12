@@ -2,9 +2,10 @@
 
 
 :root {
-  --primary-color: #151515;
+  --primary-color: #1a1a1a;
   --secondary-color: #9f9f9f;
-  --mark-color: #4DE2A0;
+  --mark-color: #4de29c;
+  --title-color: #FFF;
 }
 
 * {
@@ -14,15 +15,20 @@
   padding: 0;
 }
 
+
 a {
   text-decoration: none;
+}
+
+a:hover{
+  color: var(--mark-color);
 }
 
 a,
 h1,
 h2,
 h3 {
-  color: #fff;
+  color: var(--title-color);
 }
 
 ul {
@@ -112,7 +118,7 @@ main section{
 
 .title-container 
 .title-content {
-  width: 60%;
+  width: 55%;
   flex-direction: column;
   gap: 30px;
   margin-top: 30px;
@@ -121,17 +127,23 @@ main section{
 
 .title-container 
 .title-content h1 {
-  font-size: 2.6em;
+  font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: 30px;
+  word-break: break-word;
+  margin-bottom: 15px;
+  
 }
 
 .title-container 
-.title-content h1 mark {
-  color: #fff;
+.title-content h1:nth-child(2){
+  border-right: 2px solid;
+}
+
+.title-container 
+.title-content h1:nth-child(2) mark {
+  color: var(--title-color);
   background-color: transparent;
   border-bottom: 4px solid var(--mark-color);
-  
 }
 
 .title-container 
@@ -158,7 +170,7 @@ main section{
 
 .btn:hover{
   color: var(--mark-color);
-  border-color: #fff;
+  border-color: var(--title-color);
 }
 
 .courses-container{
@@ -195,10 +207,16 @@ main section{
 .courses-container
 .courses-content
 .courses summary{
-  color: #fff;
+  color:var(--title-color);
   cursor: pointer;
+  transition: .4s ease;
 }
 
+.courses-container
+.courses-content
+.courses summary:hover{
+  color: var(--mark-color);
+}
 
 .courses-container
 .courses-content
@@ -344,6 +362,15 @@ main section{
   color: var(--secondary-color);
 }
 
+@media(min-width: 968px){
+  .projects-container 
+  .container-cards-projects 
+  .card-project:hover{
+    transform: scale(1.05);
+  }
+}
+
+
 @media (max-width: 968px) {
   .title-container {
     justify-content: center;
@@ -355,6 +382,11 @@ main section{
     text-align: center;
     justify-content: center;
     align-items: center;
+  }
+
+  .title-container 
+  .title-content h1{
+    font-size: 2.4em;
   }
 
   .title-container 
@@ -377,7 +409,7 @@ main section{
 
   .title-container 
   .title-content h1 {
-    font-size: 1.6em;
+    font-size: 1.7em;
   }
 
   .title-container 
@@ -447,15 +479,6 @@ main section{
   }
 }
 
-@media(min-width: 900px){
-  .projects-container 
-  .container-cards-projects 
-  .card-project:hover{
-    transform: scale(1.05);
-}
-
-}
-
 @media (max-width: 360px){
   .title-container 
   .title-content h1 {
@@ -467,5 +490,34 @@ main section{
   .title-container 
   .title-content h1 {
     font-size: 1.3em;
+
+  }
+}
+
+
+.typing-animation{
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+  blinkCursor 1000ms infinite normal, 
+  typing 4s steps(33) 1s normal both;
+}
+
+
+@keyframes typing{
+  0% {
+    width: 0;
+  }
+  100% { 
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  0% {
+    border-right-color: #ffffffd8;
+  }
+  100% {
+    border-right-color: transparent;
   }
 }
