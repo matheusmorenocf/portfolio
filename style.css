@@ -137,6 +137,7 @@ main section{
 .title-container 
 .title-content h1:nth-child(2){
   border-right: 2px solid;
+  margin-bottom: 20px;
 }
 
 .title-container 
@@ -155,7 +156,7 @@ main section{
 }
 
 .title-container 
-.title-content p:nth-child(3){
+.title-content p:nth-child(4){
   margin-bottom: 40px;
 }
 
@@ -184,8 +185,8 @@ main section{
 .courses-container h2{
   font-weight: bold;
   font-size: 1.4em;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
@@ -409,7 +410,7 @@ main section{
 
   .title-container 
   .title-content h1 {
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
 
   .title-container 
