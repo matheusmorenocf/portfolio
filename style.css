@@ -162,6 +162,7 @@ main section{
 
 .btn {
   width: max-content;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .1em;
   padding-bottom: .4em;
