@@ -318,7 +318,7 @@ main section{
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .btn{
     font-size: .8em;
   }
@@ -330,7 +330,7 @@ main section{
 
   .title-container 
   .title-content h1 {
-    font-size: 1.3em;
+    font-size: 1.6em;
   }
 
   .title-container 
@@ -397,5 +397,19 @@ main section{
   .card-project 
   .container-project-img {
     height: 440px;
+  }
+}
+
+@media (max-width: 360px){
+  .title-container 
+  .title-content h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 360px){
+  .title-container 
+  .title-content h1 {
+    font-size: 1.3em;
   }
 }
