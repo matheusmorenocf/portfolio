@@ -64,6 +64,10 @@ body.dark .text-content {
   color: var(--secondary-color);
 }
 
+body.light .form-contact-container input.btn-submit {
+  color: var(--title-color-color);
+}
+
 /* Tema claro */
 
 body.light .background{
@@ -79,6 +83,10 @@ body.light .title {
 }
 
 body.light a {
+  color: var(--primary-color);
+}
+
+body.light .form-contact-container input.btn-submit {
   color: var(--primary-color);
 }
 
