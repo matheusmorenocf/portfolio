@@ -15,20 +15,13 @@
   padding: 0;
 }
 
+mark {
+  background-color: transparent;
+  border-bottom: 4px solid var(--mark-color);
+}
 
 a {
   text-decoration: none;
-}
-
-a:hover{
-  color: var(--mark-color);
-}
-
-a,
-h1,
-h2,
-h3 {
-  color: var(--title-color);
 }
 
 ul {
@@ -42,8 +35,56 @@ body {
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   align-items: center;
-
+  transition: 400ms linear;
 }
+
+body header,
+body footer, 
+body main section{
+  background-color: var(--primary-color);
+}
+
+body .title-container,
+body .courses-container {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+body h1,
+body h2,
+body h3,
+body a,
+body mark,
+body summary {
+  color: var(--title-color);
+}
+
+body p,
+body ul {
+  color: var(--secondary-color);
+}
+
+body.light header,
+body.light footer, 
+body.light main section{
+  background-color: rgb(209, 209, 209);
+}
+
+body.light .title-container,
+body.light .courses-container {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+body.light h1,
+body.light h2,
+body.light h3,
+body.light a,
+body.light mark,
+body.light summary,
+body.light p,
+body.light ul {
+  color: var(--primary-color);
+}
+
 
 header,
 footer {
@@ -52,7 +93,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
   padding: 0 25px;;
 }
 
@@ -70,8 +110,7 @@ main section{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
-  
+
 }
 
 .title-container,
@@ -111,9 +150,64 @@ main section{
   color: var(--mark-color);
 }
 
+/* Switcher */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+
+/* Corpo */
+
+
 .title-container {
   display: flex;
-  border-bottom: 1px solid var(--secondary-color);
+
 }
 
 .title-container 
@@ -129,27 +223,11 @@ main section{
 .title-content h1 {
   font-size: 2.5em;
   font-weight: bold;
-  word-break: break-word;
   margin-bottom: 15px;
-  
-}
-
-.title-container 
-.title-content h1:nth-child(2){
-  border-right: 2px solid;
-  margin-bottom: 20px;
-}
-
-.title-container 
-.title-content h1:nth-child(2) mark {
-  color: var(--title-color);
-  background-color: transparent;
-  border-bottom: 4px solid var(--mark-color);
 }
 
 .title-container 
 .title-content p {
-  color: var(--secondary-color);
   padding-right: 100px;
   line-height: 1.5em;
   margin-bottom: 15px;
@@ -172,15 +250,13 @@ main section{
 
 .btn:hover{
   color: var(--mark-color);
-  border-color: var(--title-color);
+  border-color: transparent;
 }
 
 .courses-container{
-  
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--secondary-color);
 }
 
 .courses-container h2{
@@ -202,14 +278,7 @@ main section{
 
 .courses-container
 .courses-content
-.courses{
-  color: var(--secondary-color);
-}
-
-.courses-container
-.courses-content
 .courses summary{
-  color:var(--title-color);
   cursor: pointer;
   transition: .4s ease;
 }
@@ -250,13 +319,8 @@ main section{
 .technology-container p {
   text-align: center;
   margin: 20px 0;
-  color: var(--secondary-color);
 }
 
-.technology-container
-.cursos{
-  color: var(--secondary-color);
-}
 
 .technology-container 
 .list-technology {
@@ -284,11 +348,6 @@ main section{
   transform: scale(1.2);
 }
 
-.technology-container 
-.list-technology ul li ul .experience {
-  color: var(--secondary-color);
-
-}
 
 .projects-container {
   flex-direction: column;
@@ -361,7 +420,6 @@ main section{
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
-  color: var(--secondary-color);
 }
 
 @media(min-width: 968px){
@@ -496,8 +554,8 @@ main section{
   }
 }
 
-
 .typing-animation{
+  border-right:  4px solid #949494d8;
   white-space: nowrap;
   overflow: hidden;
   animation: 
@@ -517,7 +575,7 @@ main section{
 
 @keyframes blinkCursor {
   0% {
-    border-right-color: #ffffffd8;
+    border-right-color: #464646d8;
   }
   100% {
     border-right-color: transparent;
