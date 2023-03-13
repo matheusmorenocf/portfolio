@@ -495,10 +495,11 @@ input:checked + .slider:before {
     justify-content: center;
   }
 
+
   .title-container 
   .title-content {
     width: 510px;
-    text-align: center;
+    
     justify-content: center;
     align-items: center;
   }
@@ -510,7 +511,7 @@ input:checked + .slider:before {
 
   .title-container 
   .title-content p {
-    padding: 0;
+    padding-right: 0 ;
   }
 
   .technology-container 
@@ -534,6 +535,7 @@ input:checked + .slider:before {
   .title-container 
   .title-content p{
     margin-bottom: 10px;
+
   }
 
   .courses-container
