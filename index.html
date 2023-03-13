@@ -51,7 +51,7 @@
             Atualmente estou estudando no curso Fullstack
             da Onebitcode.
           </p>
-          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571985244558" target="_blank" rel="nofollow" class="btn btn-contact hover-color">Fale comigo!</a>
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571985244558" target="_blank" rel="nofollow" class="btn btn-contact hover-color">Fale comigo! <i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
     </section>
@@ -146,7 +146,7 @@
       <div class="projects-container">
         <div class="projects-title-content">
           <h2 class="title">Projects</h2>
-          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571985244558" target="_blank" rel="nofollow" class="btn btn-contact hover-color">Fale comigo!</a>
+          <a href="#contactMe" rel="nofollow" class="btn btn-contact hover-color" id="contactBtn">Fale comigo! <i class="bi bi-envelope-at"></i></a>
         </div>
         <div class="container-cards-projects">
           <div class="card-project">
@@ -214,6 +214,36 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="background">
+      <div class="form-contact-container form-hidden">
+        <h3 class="title">Me envie um e-mail</h3>
+        <form action="https://api.staticforms.xyz/submit" method="post" id="contactMe">
+          <div class="row-form">
+            <label for="name" class="title">
+               Nome:
+            </label>
+            <input type="text" name="name" placeholder="Seu nome..." autocomplete="off">
+          </div>
+          <div class="row-form">
+            <label for="email" class="title">
+              E-mail:
+            </label>
+            <input type="email" name="email" placeholder="Seu e-mail..." autocomplete="off">
+          </div>
+         <div class="row-form">
+            <label for="name" class="title">
+                Mensagem:
+            </label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite a mensagem..."></textarea>
+         </div>
+         <div class="row-form">
+          <input type="submit" value="Enviar" class="btn btn-submit hover-color">
+         </div>
+         <input type="hidden" name="accessKey" value="1b88124b-3bc5-4f1d-a9e5-33aea7d9e7d7">
+         <input type="hidden" name="redirectTo" value="https://matheusmorenocf.github.io/portfolio/index.html">
+        </form>
       </div>
     </section>
   </main>
