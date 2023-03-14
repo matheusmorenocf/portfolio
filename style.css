@@ -105,6 +105,12 @@ body.light .text-content {
   border-color: transparent;
 }
 
+.social-nav ul li .link-nav:hover::before,
+.social-nav ul li .link-nav:hover::after {
+  opacity: 1;
+  color: var(--mark-color);
+}
+
 .icon-container
 .hover-color:hover{
   color: var(--mark-color);
@@ -127,7 +133,7 @@ form .row-form
 header,
 footer {
   width: 100%;
-  min-height: 100px;
+  min-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,19 +175,46 @@ main section{
 
 }
 
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+
+.social-nav
+.social-links {
+  display: flex;
+  gap: 15px;
+  font-size: 26px;
+  transition: .4s ease;
+}
+
 .social-nav ul {
   display: flex;
   align-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 
-.social-nav ul li{
-  display: flex;
-  align-items: center;
-}
-.social-nav ul li a i{
-  font-size: 26px;
+
+.social-nav
+.link-nav {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: bold;
   transition: .4s ease;
+}
+
+
+.social-nav ul li .link-nav::before {
+  content: '[  ';
+  opacity: 0;
+  transition: .4s ease;
+}
+.social-nav ul li .link-nav::after {
+  content: '  ]';
+  opacity: 0;
+  transition: 300ms ease;
 }
 
 /* Switcher */
@@ -522,6 +555,20 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 550px) {
+  header{
+    padding: 25px;
+    min-height: min-content;
+  }
+
+  .header-content{
+    flex-direction: column;
+  }
+
+  .social-nav {
+    flex-direction: column;
+    gap: 25px;
+  }
+
   .title-container 
   .title-content {
     width: 100%;
