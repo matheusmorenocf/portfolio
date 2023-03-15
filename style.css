@@ -96,6 +96,14 @@ body.light .text-content {
 
 /* Hover */
 
+.hover-size{
+  transition: 400ms ease;
+}
+
+.hover-color{
+  transition: 400ms ease;
+}
+
 .hover-size:hover{
   font-size: 30px;
 }
@@ -105,8 +113,8 @@ body.light .text-content {
   border-color: transparent;
 }
 
-.social-nav ul li .link-nav:hover::before,
-.social-nav ul li .link-nav:hover::after {
+.social-nav .link-nav:hover::before,
+.social-nav .link-nav:hover::after {
   opacity: 1;
   color: var(--mark-color);
 }
@@ -179,15 +187,13 @@ main section{
   display: flex;
   align-items: center;
   gap: 25px;
-
 }
 
 .social-nav
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   font-size: 26px;
-  transition: .4s ease;
 }
 
 .social-nav ul {
