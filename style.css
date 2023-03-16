@@ -601,6 +601,7 @@ ul.text-content li{
 
   .header-content{
     flex-direction: column;
+    gap: 30px;
   }
 
   .social-nav {
