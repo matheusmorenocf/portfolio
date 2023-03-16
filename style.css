@@ -2,11 +2,11 @@
 /* Definindo variaveis */ 
 
 :root {
-  --color-primary: #3C91E6;
-  --color-secondary: #1C3144;
+  --color-primary: #fda400;
+  --color-secondary: #f46703;
 
   --color-background-light: #F7F7F7;
-  --color-background-dark: #555555;
+  --color-background-dark: #2f2f2f;
 
   --color-text-light: #5E5E5E;
   --color-text-dark: #E4E4E4;
@@ -15,7 +15,7 @@
   --color-title-dark: #FFFFFF;
 
   --color-header-light: #F7F7F7C7;
-  --color-header-dark: #555555CD;
+  --color-header-dark: #2f2f2fCD;
 }
 
 /* Importando fontes */ 
