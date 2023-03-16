@@ -2,10 +2,18 @@
 
 
 :root {
-  --primary-color: #1a1a1a;
-  --secondary-color: #9f9f9f;
-  --mark-color: #4de29c;
-  --title-color: #FFF;
+  --mark-color: #3C91E6;
+  --mark-color-2: #1C3144;
+  
+  --header-background-light: #f7f7f7c7;
+  --background-light-mode:  #F7F7F7;
+  --color-title-light-mode: #000000;
+  --color-text-light-mode: #9f9f9f;
+
+  --header-background-dark: #555555cd;
+  --background-dark-mode: #555555;
+  --color-title-dark-mode: #FFFFFF;
+  --color-text-dark-mode: #e4e4e4;
 }
 
 * {
@@ -13,6 +21,7 @@
   font: inherit;
   margin: 0;
   padding: 0;
+  transition: 400ms ease;
 }
 
 mark {
@@ -44,54 +53,62 @@ body {
 
 /* Tema escuro */
 
+body.dark header {
+  background-color: var(--header-background-dark);
+}
+
 body.dark .background{
-  background-color: var(--primary-color);
+  background-color: var(--background-dark-mode);
 }
 
 body.dark .border-color {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--color-text-dark-mode);
 }
 
 body.dark .title {
-  color: var(--title-color);
+  color: var(--color-title-dark-mode);
 }
 
 body.dark a {
-  color: var(--title-color);
+  color: var(--color-title-dark-mode);
 }
 
 body.dark .text-content {
-  color: var(--secondary-color);
+  color: var(--color-text-dark-mode);
 }
 
 body.light .form-contact-container input.btn-submit {
-  color: var(--title-color-color);
+  color: var(--color-title-dark-mode);
 }
 
 /* Tema claro */
 
+body.light header {
+  background-color: var(--header-background-light);
+}
+
 body.light .background{
-  background-color: rgb(209, 209, 209);
+  background-color: var(--background-light-mode);
 }
 
 body.light .border-color {
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--color-text-light-mode);
 }
 
 body.light .title {
-  color: var(--primary-color);
+  color: var(--color-title-light-mode);
 }
 
 body.light a {
-  color: var(--primary-color);
+  color: var(--color-title-light-mode);
 }
 
 body.light .form-contact-container input.btn-submit {
-  color: var(--primary-color);
+  color: var(--color-title-light-mode);
 }
 
 body.light .text-content {
-  color: var(--primary-color);
+  color: var(--color-text-light-mode);
 }
 
 /* Hover */
@@ -113,12 +130,6 @@ body.light .text-content {
   border-color: transparent;
 }
 
-.social-nav .link-nav:hover::before,
-.social-nav .link-nav:hover::after {
-  opacity: 1;
-  color: var(--mark-color);
-}
-
 .icon-container
 .hover-color:hover{
   color: var(--mark-color);
@@ -126,7 +137,7 @@ body.light .text-content {
 
 .courses
 .hover-color:hover{
-  color: var(--mark-color);
+  color: var(--mark-color-2);
 }
 
 .form-contact-container
@@ -148,12 +159,20 @@ footer {
   padding: 0 25px;;
 }
 
+header{
+  position: fixed;
+  top: -150px;
+}
+
+.visible {
+  top: 0;
+}
+
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 main section{
@@ -226,52 +245,18 @@ main section{
 /* Switcher */
 
 .switch {
-  position: relative;
+
   display: inline-block;
-  width: 50px;
-  height: 26px;
+  cursor: pointer;
+
 }
 
 .switch input {
   display: none;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: gray;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: var(--mark-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--mark-color);
-}
-
-input:checked + .slider:before {
-  transform: translateX(22px);
+.switch i{
+  font-size: 26px;
 }
 
 
@@ -280,7 +265,7 @@ input:checked + .slider:before {
 
 .title-container {
   display: flex;
-
+  padding-top: 150px;
 }
 
 .title-container 
@@ -328,6 +313,7 @@ input:checked + .slider:before {
 }
 
 .courses-container h2{
+  text-align: center;
   font-weight: bold;
   font-size: 1.4em;
   margin-top: 30px;
@@ -346,31 +332,65 @@ input:checked + .slider:before {
 
 .courses-container
 .courses-content
-.courses summary{
-  cursor: pointer;
-  transition: .4s ease;
+.courses i {
+  transition: 400ms ease;
 }
 
 .courses-container
 .courses-content
-.courses p, ul{
+.courses[open]  i {
+  transform: rotate(180deg);
+}
+
+.courses-container
+.courses-content
+.courses summary{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  transition: .4s ease;
+  border: 1px solid var(--color-text-light-mode);
+  border-radius: 8px;
+  padding: 10px;
+  transition: 400ms ease;
+}
+
+.courses-container
+.courses-content
+.courses 
+p.text-content {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+.courses-container
+.courses-content
+.courses 
+p.text-content 
+ul.text-content{
   margin: 15px ;
   font-size: .9em;
 }
 
 .courses-container
 .courses-content
-.courses ul {
+.courses 
+ul.text-content {
   gap: 20px;
   padding-left: 15px;
 }
 
 .courses-container
 .courses-content
-.courses ul li{
+.courses 
+ul.text-content li{
   display: flex;
   justify-content: space-between;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
 }
 
 .technology-container {
@@ -481,6 +501,7 @@ input:checked + .slider:before {
 .form-contact-container h3{
   text-align: center;
   font-size: 1.5em;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 
@@ -491,6 +512,7 @@ input:checked + .slider:before {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .form-contact-container form .row-form {
@@ -518,7 +540,7 @@ input:checked + .slider:before {
   text-align: center;
   max-width: 500px;
   background-color: transparent;
-  color: var(--title-color);
+  color: var(--color-title-light-mode);
   border-color: transparent;
   border-bottom-color: var(--mark-color);
 }
@@ -528,6 +550,16 @@ input:checked + .slider:before {
 }
 
 /* Responsividade */
+
+@media (min-width: 800px) {
+  /*Efeito hover apenas em midias maiores que 768px*/
+  .social-nav .link-nav:hover::before,
+  .social-nav .link-nav:hover::after {
+  opacity: 1;
+  color: var(--mark-color);
+  }
+
+}
 
 @media (max-width: 968px) {
   .title-container {
@@ -562,8 +594,9 @@ input:checked + .slider:before {
 
 @media (max-width: 550px) {
   header{
-    padding: 25px;
-    min-height: min-content;
+    padding: 20px 25px;
+    height: 200px;
+    top: -200px;
   }
 
   .header-content{
@@ -572,7 +605,11 @@ input:checked + .slider:before {
 
   .social-nav {
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
+  }
+
+  .title-container{
+    padding-top: 180px;
   }
 
   .title-container 
