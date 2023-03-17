@@ -415,7 +415,8 @@ ul.text-content li{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 220px;
+  height: 205px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -424,7 +425,7 @@ ul.text-content li{
 .card-project 
 .container-project-img img{
   width: 100%;
-  border-radius: 10px;
+  
   
 }
 
@@ -630,7 +631,7 @@ ul.text-content li{
   .container-cards-projects 
   .card-project 
   .container-project-img {
-    height: 550px;
+    height: 100%;
   }
 
   .form-contact-container{
