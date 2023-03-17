@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href="assets/favicon_io/favicon-32x32.png" type="image/x-icon">
+  <title>Matheus M. Projetos</title>
+  <link rel="stylesheet" href="style/projectsPage.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/theme.css">
+  <script src="script/index.js" type="module" defer></script>
+</head>
+<body class="light">
+  <header class="visible">
+    <div class="header-content width-content">
+      <div class="icon-container">
+        <a href="#" class="title hover-color">MM<i class="bi bi-code-slash"></i></a>
+      </div>
+      <nav class="social-nav">
+        <ul>
+          <li>
+            <a href="index.html" class="link-nav title">Inicio</a>
+          </li>
+        </ul>
+        <div class="social-links">
+          <a href="https://github.com/matheusmorenocf" target="_blank" class="title hover-color"><i class="bi bi-github hover-color title"></i></a>
+          <a href="https://www.linkedin.com/in/matheus-freitas-6373b7128/" target="_blank" class="title hover-color"><i
+            class="bi bi-linkedin "></i></a>
+          <label  class="switch title hover-color" for="theme">
+            <input type="checkbox" id="theme">
+            <i class="bi bi-moon-fill" id="switcher"></i>
+          </label>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="background">
+
+      <div class="projects-container width-content" id="projects">
+        <div class="projects-title-content">
+          <h2 class="title">Projects</h2>
+          <a href="#contactMe" rel="nofollow" class="btn btn-contact title hover-color" id="contactBtn">Fale comigo! <i class="bi bi-envelope-at"></i></a>
+        </div>
+        
+        <div class="container-cards-projects">
+
+          <div class="card-project">
+            <div class="container-project-img">
+              <picture>
+                <source media="(max-width: 550px)" srcset="assets/em_breve.jpg" type="image/jpg">
+                <img src="assets/em_breve.jpg" alt="">
+              </picture>
+            </div>
+            <h3 class="title">Em breve</h3>
+            <p class="text-content"><small>HTML</small> <small>CSS</small> <small>Sass</small> <small>Javacript</small> </p>
+            <p>
+              <a href="#"
+                target="_blank" class="btn title hover-color"> Ver código</a>
+              <a href="#"
+                target="_blank" class="btn title hover-color">Ver ao vivo</a>
+            </p>
+          </div>
+          
+          
+          <div class="card-project">
+            <div class="container-project-img">
+              <picture>
+                <source media="(max-width: 550px)" srcset="assets/em_breve.jpg" type="image/jpg">
+                <img src="assets/em_breve.jpg" alt="">
+              </picture>
+            </div>
+            <h3 class="title">Em breve</h3>
+            <p class="text-content"><small>HTML</small> <small>CSS</small> <small>Sass</small> <small>Javacript</small> </p>
+            <p>
+              <a href="#"
+                target="_blank" class="btn title hover-color"> Ver código</a>
+              <a href="#"
+                target="_blank" class="btn title hover-color">Ver ao vivo</a>
+            </p>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+    <section class="background">
+      <div class="form-contact-container width-content form-hidden">
+        <h3 class="title">Me envie um e-mail</h3>
+        <form action="https://api.staticforms.xyz/submit" method="post" id="contactMe">
+          <div class="row-form">
+            <label for="name" class="title">
+               Nome:
+            </label>
+            <input type="text" name="name" placeholder="Seu nome..." autocomplete="off">
+          </div>
+          <div class="row-form">
+            <label for="email" class="title">
+              E-mail:
+            </label>
+            <input type="email" name="email" placeholder="Seu e-mail..." autocomplete="off">
+          </div>
+         <div class="row-form">
+            <label for="name" class="title">
+                Mensagem:
+            </label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite a mensagem..."></textarea>
+         </div>
+         <div class="row-form">
+          <input type="submit" value="Enviar" class="btn btn-submit hover-color title">
+         </div>
+         <input type="hidden" name="accessKey" value="1b88124b-3bc5-4f1d-a9e5-33aea7d9e7d7">
+         <input type="hidden" name="redirectTo" value="https://matheusmorenocf.github.io/portfolio/index.html">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="background">
+    <div class="footer-content">
+      <div class="icon-container">
+        <a href="#" class="title hover-color">MM <i class="bi bi-code-slash"></i></a>
+      </div>
+      <div class="social-nav">
+          <div class="social-links">
+            <a href="https://github.com/matheusmorenocf" target="_blank" class="title hover-color"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/matheus-freitas-6373b7128/" target="_blank" class="title hover-color"><i
+                  class="bi bi-linkedin"></i></a>
+          </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
