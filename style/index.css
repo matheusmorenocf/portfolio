@@ -185,9 +185,8 @@ ul.text-content li{
 }
 
 .technology-container 
-.list-technology ul li .technology img {
-  width: 80px;
-  transition: .4s ease;
+.list-technology ul li .technology i {
+  font-size: 80px;
 }
 
 .see-more {

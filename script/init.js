@@ -9,8 +9,8 @@ function switchTheme() {
   themeButton.addEventListener('change', () => {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.add('bi-brightness-high-fill') : document.getElementById('switcher').classList.add('bi-moon-fill');
-    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.remove('bi-moon-fill') : document.getElementById('switcher').classList.add('bi-brightness-high-fill');
+    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.add('fa-sun') : document.getElementById('switcher').classList.add('fa-moon');
+    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.remove('fa-moon') : document.getElementById('switcher').classList.add('fa-sun');
   });
 
 }
