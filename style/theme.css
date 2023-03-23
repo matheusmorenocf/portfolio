@@ -99,3 +99,9 @@ body {
   border-bottom: 2px solid var(--color-primary);
   transition: .4s ease;
 }
+
+@media (max-width: 360px){
+  .btn{
+    font-size: .95em;
+  }
+}

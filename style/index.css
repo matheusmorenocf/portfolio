@@ -27,6 +27,8 @@ main section{
 
 .title-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 150px;
 }
 
@@ -71,6 +73,20 @@ h1 mark {
  display: flex;
  justify-content: space-between;
 }
+
+.title-img-container {
+ display: flex; 
+ justify-content: center;
+ align-items: center;
+ max-width: 400px;
+ width: 100%;
+}
+
+.title-img-container img {
+ border-radius: 50%;
+ max-width: 100%;
+}
+
 
 .courses-container{
   flex-direction: column;
@@ -208,13 +224,21 @@ ul.text-content li{
 @media (max-width: 968px) {
   .title-container {
     justify-content: center;
+    flex-direction: column;
   }
 
+  .title-img-container {
+    
+  }
+
+  .title-img-container img {
+    
+  }
 
   .title-container 
   .title-content {
-    width: 510px;
-    
+    max-width: 550px;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
