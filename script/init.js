@@ -8,7 +8,18 @@ function init() {
 function loader() {
   window.addEventListener("load", showLoader);
   window.addEventListener("load", hideLoader);
+  window.addEventListener("scroll", updateLoaderPosition);
+
 }
+
+function updateLoaderPosition() {
+  const loader = document.getElementById("loader");
+  const windowTop = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const loaderHeight = loader.offsetHeight;
+  loader.style.top = (windowTop + (windowHeight / 2) - (loaderHeight / 2)) + "px";
+}
+
 
 function showLoader() {
   document.getElementById("loader").style.display = "block";
