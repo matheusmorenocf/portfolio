@@ -8,7 +8,7 @@ function init() {
 function loader() {
   window.addEventListener("load", showLoader);
   window.addEventListener("load", hideLoader);
-  window.addEventListener("scroll", updateLoaderPosition);
+  // window.addEventListener("scroll", updateLoaderPosition);
 
 }
 
