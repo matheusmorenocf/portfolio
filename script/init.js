@@ -20,7 +20,6 @@ function updateLoaderPosition() {
   loader.style.top = (windowTop + (windowHeight / 2) - (loaderHeight / 2)) + "px";
 }
 
-
 function showLoader() {
   document.getElementById("loader").style.display = "block";
   document.getElementById("container").style.display = "none";
