@@ -1,7 +1,23 @@
 function init() {
+  loader()
   switchTheme();
   formContact();
   scrollHeader();
+}
+
+function loader() {
+  window.addEventListener("load", showLoader);
+  window.addEventListener("load", hideLoader);
+}
+
+function showLoader() {
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("container").style.display = "none";
+}
+
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("container").style.display = "block";
 }
 
 function switchTheme() {
