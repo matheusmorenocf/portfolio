@@ -38,6 +38,7 @@ body.light {
 
 /* Definindo classes */
 #container {
+  display: none;
   width: 100%;
 }
 

@@ -22,7 +22,6 @@ function updateLoaderPosition() {
 
 function showLoader() {
   document.getElementById("loader").style.display = "block";
-  document.getElementById("container").style.display = "none";
 }
 
 function hideLoader() {
