@@ -34,12 +34,11 @@
 .projects-container 
 .container-cards-projects 
 .card-project {
-  height: 420px;
   min-width: 48%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  
   transition: .4s ease-in-out;
 }
 
@@ -80,7 +79,7 @@
 .projects-container 
 .container-cards-projects 
 .card-project p.project-description {
-  height: 60px;
+  height: 70px;
   width: 100%;
   font-size: 14px;
   padding-right: 20px;
