@@ -62,6 +62,7 @@ header{
 
 .social-nav
 .link-nav {
+  cursor: pointer;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: bold;
@@ -69,15 +70,16 @@ header{
 }
 
 .social-nav ul li .link-nav::before {
-  content: '[  ';
-  opacity: 0;
+  content:  '';
+  border: 2px solid transparent;
   transition: .4s ease;
 }
 .social-nav ul li .link-nav::after {
-  content: '  ]';
-  opacity: 0;
-  transition: 300ms ease;
+  content:  '';
+  border: 2px solid transparent;
+  transition: .4s ease;
 }
+
 
 /* Switcher */
 

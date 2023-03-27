@@ -12,13 +12,13 @@ function loader() {
 
 }
 
-function updateLoaderPosition() {
-  const loader = document.querySelector("#loader");
-  const windowTop = window.pageYOffset || document.documentElement.scrollTop;
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const loaderHeight = loader.offsetHeight;
-  loader.style.top = (windowTop + (windowHeight / 2) - (loaderHeight / 2)) + "px";
-}
+// function updateLoaderPosition() {
+//   const loader = document.querySelector("#loader");
+//   const windowTop = window.pageYOffset || document.documentElement.scrollTop;
+//   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+//   const loaderHeight = loader.offsetHeight;
+//   loader.style.top = (windowTop + (windowHeight / 2) - (loaderHeight / 2)) + "px";
+// }
 
 function showLoader() {
   document.querySelector("#loader").style.display = "block";
@@ -41,14 +41,25 @@ function switchTheme() {
 }
 function formContact() {
   const contactBtn = document.querySelector('#contactBtn');
-  contactBtn.addEventListener('click', () => {
-    document.querySelector('.contact-container').classList.remove('form-hidden');
-  });
+  contactBtn.addEventListener('click', hideForm);
   const closeBtn = document.querySelector('#close-form');
-  closeBtn.addEventListener('click', () => {
-    document.querySelector('.contact-container').classList.add('form-hidden');
+  closeBtn.addEventListener('click',hideForm)
+  const containerForm = document.querySelector('.contact-container');
+  containerForm.addEventListener('click', (ev) => {
+    if(ev.target === containerForm) {
+      hideForm()
+    }
   })
 }
+
+function hideForm () {
+  const contactContainer = document.querySelector('.contact-container');
+  contactContainer.classList.toggle('form-hidden');
+}
+
+
+
+
 function scrollHeader() {
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
