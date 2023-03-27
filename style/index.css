@@ -85,6 +85,7 @@ h1 mark {
 }
 
 .title-img-container img {
+  border: 5px solid var(--color-primary);
  border-radius: 50%;
  max-width: 100%;
 }
