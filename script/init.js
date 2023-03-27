@@ -13,7 +13,7 @@ function loader() {
 }
 
 function updateLoaderPosition() {
-  const loader = document.getElementById("loader");
+  const loader = document.querySelector("#loader");
   const windowTop = window.pageYOffset || document.documentElement.scrollTop;
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
   const loaderHeight = loader.offsetHeight;
@@ -21,30 +21,33 @@ function updateLoaderPosition() {
 }
 
 function showLoader() {
-  document.getElementById("loader").style.display = "block";
+  document.querySelector("#loader").style.display = "block";
 }
 
 function hideLoader() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("container").style.display = "block";
+  document.querySelector("#loader").style.display = "none";
+  document.querySelector("#container").style.display = "block";
 }
 
 function switchTheme() {
-  const themeButton = document.getElementById('theme');
+  const themeButton = document.querySelector('#theme');
   themeButton.addEventListener('change', () => {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.add('fa-sun') : document.getElementById('switcher').classList.add('fa-moon');
-    document.body.classList.contains('dark') ? document.getElementById('switcher').classList.remove('fa-moon') : document.getElementById('switcher').classList.add('fa-sun');
+    document.body.classList.contains('dark') ? document.querySelector('#switcher').classList.add('fa-sun') : document.querySelector('#switcher').classList.add('fa-moon');
+    document.body.classList.contains('dark') ? document.querySelector('#switcher').classList.remove('fa-moon') : document.querySelector('#switcher').classList.add('fa-sun');
   });
 
 }
 function formContact() {
-  const contactBtn = document.getElementById('contactBtn');
+  const contactBtn = document.querySelector('#contactBtn');
   contactBtn.addEventListener('click', () => {
-    document.querySelector('.form-contact-container').classList.remove('form-hidden');
+    document.querySelector('.contact-container').classList.remove('form-hidden');
   });
-
+  const closeBtn = document.querySelector('#close-form');
+  closeBtn.addEventListener('click', () => {
+    document.querySelector('.contact-container').classList.add('form-hidden');
+  })
 }
 function scrollHeader() {
   let prevScrollpos = window.pageYOffset;

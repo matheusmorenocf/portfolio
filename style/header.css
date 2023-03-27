@@ -1,6 +1,8 @@
 
 
-
+body {
+  position: relative;
+}
 
 header,
 footer {
@@ -97,8 +99,45 @@ header{
 
 /* Contact form */
 
+.color-form {
+  color: #FFF;
+}
+
+.contact-container {
+  position: fixed;
+  top: 0;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.582);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-contact-container {
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 30px;
+
+}
+
+.row-form-title {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 5px;
+}
+
+.row-form-title i{
+  justify-self: flex-end;
+  font-size: 1.5em;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
 .form-contact-container h3{
-  text-align: center;
+  justify-self: flex-end;
   font-size: 1.5em;
   margin-top: 30px;
   margin-bottom: 25px;
@@ -118,7 +157,8 @@ header{
   max-width: 600px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .form-contact-container form .row-form label {
@@ -139,7 +179,7 @@ header{
   text-align: center;
   max-width: 500px;
   background-color: transparent;
-  color: var(--color-title);
+  color: #FFF;
   border-color: transparent;
   border-bottom-color: var(--color-primary);
 }

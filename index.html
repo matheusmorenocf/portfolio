@@ -312,30 +312,33 @@
           </div>
         </div>
       </section>
-      <section class="background">
-        <div class="form-contact-container width-content form-hidden">
-          <h3 class="title">Me envie um e-mail</h3>
+      <section class="contact-container form-hidden">
+        <div class="form-contact-container">
+          <div class="row-form-title">
+            <h3 class="color-form">Me envie um e-mail</h3>
+            <i class="fa-sharp fa-solid fa-xmark color-form" id="close-form"></i>
+          </div>
           <form action="https://api.staticforms.xyz/submit" method="post" id="contactMe">
             <div class="row-form">
-              <label for="name" class="title">
+              <label for="name" class="color-form">
                  Nome:
               </label>
               <input type="text" name="name" placeholder="Seu nome..." autocomplete="off">
             </div>
             <div class="row-form">
-              <label for="email" class="title">
+              <label for="email" class="color-form">
                 E-mail:
               </label>
               <input type="email" name="email" placeholder="Seu e-mail..." autocomplete="off">
             </div>
            <div class="row-form">
-              <label for="name" class="title">
+              <label for="name" class="color-form">
                   Mensagem:
               </label>
               <textarea name="message" cols="30" rows="10" placeholder="Digite a mensagem..."></textarea>
            </div>
            <div class="row-form">
-            <input type="submit" value="Enviar" class="btn hover-color btn-submit  title">
+            <input type="submit" value="Enviar" class="btn btn-submit">
            </div>
            <input type="hidden" name="accessKey" value="1b88124b-3bc5-4f1d-a9e5-33aea7d9e7d7">
            <input type="hidden" name="redirectTo" value="https://matheusmorenocf.github.io/portfolio/index.html">
