@@ -48,6 +48,8 @@ main section{
   margin-bottom: 15px;
 }
 
+
+
 .title-container
 .title-content
 h1 mark {
@@ -71,7 +73,7 @@ h1 mark {
 .title-content
 .btn-container {
  display: flex;
- justify-content: space-between;
+ gap: 15px;
 }
 
 .title-img-container {
@@ -245,6 +247,13 @@ ul.text-content li{
     padding-right: 0 ;
   }
 
+  .title-container 
+  .title-content
+  .btn-container {
+  display: flex;
+  justify-content: space-between;
+  }
+
   .technology-container 
   .list-technology ul {
     justify-content: center;
@@ -252,7 +261,7 @@ ul.text-content li{
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 705px) {
   .width-content {
     width: 100%;
   }
@@ -271,6 +280,8 @@ ul.text-content li{
     margin-bottom: 10px;
 
   }
+
+
 
   .courses-container
   .courses-content

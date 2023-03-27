@@ -33,7 +33,6 @@ header{
 
 .icon-container {
   display: flex;
-  flex-direction: column;
   gap: 5px;
 }
 
@@ -64,7 +63,7 @@ header{
 .social-nav
 .link-nav {
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   font-weight: bold;
   transition: .4s ease;
 }
@@ -158,16 +157,29 @@ header{
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 705px) {
   header{
     padding: 20px 25px;
     height: 220px;
     top: -200px;
   }
 
+  footer {
+    height: 200px;
+  }
+
   .header-content{
     flex-direction: column;
     gap: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer.icon-container {
+    flex-direction: column;
+    order: 2;
   }
 
   .social-nav {
@@ -181,5 +193,11 @@ header{
 
   .form-contact-container form .row-form:nth-child(3){
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  a.btn {
+    font-size: .9em;
   }
 }

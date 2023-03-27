@@ -6,8 +6,8 @@
 /* Definindo variaveis */ 
 
 :root {
-  --color-primary: #fda400;
-  --color-secondary: #f46703;
+  --color-primary: #5847eb;
+  --color-secondary: #7536d3;
 
   --color-background-light: #F7F7F7;
   --color-background-dark: #2f2f2f;
@@ -61,6 +61,10 @@ body.light {
   color: var(--color-primary);
 }
 
+.btn.hover-color:hover {
+  border: transparent;
+}
+
 /* Reset  */ 
 
 * {
@@ -110,20 +114,25 @@ body {
   }
 }
 
+
+
 /* Loader */
 
-
-
 #loader {
-  border: 8px solid #f3f3f3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+/*  border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 2s linear infinite;
   margin: auto;
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;*/
+
 }
 
 @keyframes spin {
