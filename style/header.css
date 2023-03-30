@@ -132,7 +132,6 @@ header{
 .row-form-title i{
   justify-self: flex-end;
   font-size: 1.5em;
-  margin-right: 30px;
   cursor: pointer;
 }
 
