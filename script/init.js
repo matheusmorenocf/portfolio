@@ -5,6 +5,7 @@ let preferences = [
 
 function init() {
   loader();
+  savePreferences();
   getPreferences();
   switchTheme();
   formContact();
@@ -14,7 +15,6 @@ function init() {
 function getPreferences() {
   const pref = JSON.parse(localStorage.getItem('theme')) ?? []
   const [{ theme }] = pref
-  console.log(theme)
   if (theme === 'light') {
     document.body.classList.add('light')
     document.body.classList.remove('remove')
