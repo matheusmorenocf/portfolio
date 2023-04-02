@@ -76,6 +76,7 @@ body.light {
 
 .background {
   background-color: var(--color-background);
+  transition: 400ms linear;
 }
 
 /* Hover */
@@ -293,6 +294,7 @@ footer {
 
 header{
   background-color: var(--color-header);
+  transition: 400ms linear;
   position: fixed;
   top: -150px;
   z-index: 1;
