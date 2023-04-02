@@ -31,7 +31,9 @@
               <a href="index.html" class="link-nav title hover-color">Inicio</a>
             </li>
             <li>
-              <span href="#contactMe" rel="nofollow" class="link-nav title hover-color" id="contactBtn">Fale comigo! <i class="bi bi-envelope-at"></i></span>
+              <span href="#contactMe" rel="nofollow" class="link-nav title hover-color" id="contactBtn">
+                Fale comigo! <i class="fa-solid fa-envelope"></i>
+              </span>
             </li>
           </ul>
           <div class="social-links">
@@ -40,7 +42,7 @@
             <a href="https://www.instagram.com/morenocf01/" target="_blank" class="title hover-color"><i class="fa-brands fa-instagram"></i></a>
             <label  class="switch title hover-color" for="theme">
               <input type="checkbox" id="theme">
-              <i class="bi bi-moon-fill" id="switcher"></i>
+              <i class="fa-solid fa-moon" id="switcher"></i>
             </label>
           </div>
         </nav>
@@ -140,24 +142,24 @@
             <h3 class="color-form">Me envie um e-mail</h3>
             <i class="fa-sharp fa-solid fa-xmark color-form" id="close-form"></i>
           </div>
-          <form action="https://api.staticforms.xyz/submit" method="post" id="contactMe">
+          <form action="https://api.staticforms.xyz/submit" method="post" id="contactMe" autocomplete="off">
             <div class="row-form">
               <label for="name" class="color-form">
                  Nome:
               </label>
-              <input type="text" name="name" placeholder="Seu nome..." autocomplete="off">
+              <input type="text" name="name" placeholder="Seu nome..." required>
             </div>
             <div class="row-form">
               <label for="email" class="color-form">
                 E-mail:
               </label>
-              <input type="email" name="email" placeholder="Seu e-mail..." autocomplete="off">
+              <input type="email" name="email" placeholder="Seu e-mail..." required>
             </div>
            <div class="row-form">
               <label for="name" class="color-form">
                   Mensagem:
               </label>
-              <textarea name="message" cols="30" rows="10" placeholder="Digite a mensagem..."></textarea>
+              <textarea name="message"  placeholder="Digite a mensagem..." rows="5" required></textarea>
            </div>
            <div class="row-form">
             <input type="submit" value="Enviar" class="btn-submit">
@@ -165,17 +167,19 @@
            <input type="hidden" name="accessKey" value="1b88124b-3bc5-4f1d-a9e5-33aea7d9e7d7">
            <input type="hidden" name="redirectTo" value="https://matheusmorenocf.github.io/portfolio/index.html">
           </form>
-          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571985244558" target="_blank" rel="nofollow" class="btn btn-download color-form hover-color">
-            whatsapp <i class="fa-brands fa-whatsapp"></i>
-
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571985244558" target="_blank" rel="nofollow" class="btn-wpp">
+            <i class="fa-brands fa-whatsapp"></i>
+            Whats App
           </a>
         </div>
       </section>
     </main>
     <footer class="background">
       <div class="footer-content">
-        <p class="text-content">Copyright © 2023 <a href="#" class="title hover-color">Matheus M.</a></p>
+        <div class="icon-container">
+          <p class="text-content">Copyright © 2023 <a href="#" class="title hover-color">Matheus M.</a></p>
         </div>
+        
         <div class="social-nav">
             <div class="social-links">
               <a href="https://github.com/matheusmorenocf" target="_blank" class="title hover-color"><i class="fa-brands fa-github"></i></a>

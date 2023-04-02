@@ -28,6 +28,7 @@ body.dark {
   --color-title: var(--color-title-dark);
   --color-text: var(--color-text-dark);
   --color-header: var(--color-header-dark);
+  background-color: var(--color-background-dark);
 }
 
 body.light {
@@ -35,7 +36,28 @@ body.light {
   --color-title: var(--color-title-light);
   --color-text: var(--color-text-light);
   --color-header: var(--color-header-light);
+  background-color: var(--color-background-light);
 }
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-text);
+}
+
+/* Largura do conteudo */
+
+.width-content {
+  max-width: 950px;
+  width: 100%;
+}
+
 
 /* Definindo classes */
 #container {

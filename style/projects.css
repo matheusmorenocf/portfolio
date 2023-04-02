@@ -164,3 +164,14 @@
 
 
 }
+
+@media (max-width: 340px) {
+  .card-project
+  .buttons {
+    font-size: 14px;
+  }
+  .card-project
+  .buttons svg {
+    width: 18px;
+  }
+}
