@@ -5,7 +5,6 @@ let preferences = [
 
 function init() {
   loader();
-  savePreferences();
   getPreferences();
   switchTheme();
   formContact();
@@ -13,16 +12,18 @@ function init() {
 }
 
 function getPreferences() {
-  const pref = JSON.parse(localStorage.getItem('theme')) ?? []
-  const [{ theme }] = pref
-  if (theme === 'light') {
-    document.body.classList.add('light')
-    document.body.classList.remove('remove')
-
-  }
-  else {
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
+  const pref = JSON.parse(localStorage.getItem('theme')) ?? null
+  if(pref) {
+    const [{ theme }] = pref
+    if (theme === 'light') {
+      document.body.classList.add('light')
+      document.body.classList.remove('remove')
+  
+    }
+    else {
+      document.body.classList.add('dark')
+      document.body.classList.remove('light')
+    }
   }
 }
 
