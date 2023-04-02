@@ -1,8 +1,34 @@
+let preferences = [
+  { theme: '' }
+]
+
+
 function init() {
-  loader()
+  loader();
+  getPreferences();
   switchTheme();
   formContact();
   scrollHeader();
+}
+
+function getPreferences() {
+  const pref = JSON.parse(localStorage.getItem('theme')) ?? []
+  const [{ theme }] = pref
+  console.log(theme)
+  if (theme === 'light') {
+    document.body.classList.add('light')
+    document.body.classList.remove('remove')
+
+  }
+  else {
+    document.body.classList.add('dark')
+    document.body.classList.remove('light')
+  }
+}
+
+function savePreferences() {
+  document.body.classList.contains('dark') ? preferences[0].theme = 'dark' : preferences[0].theme = 'light'
+  localStorage.setItem('theme', JSON.stringify(preferences))
 }
 
 function loader() {
@@ -34,8 +60,9 @@ function switchTheme() {
   themeButton.addEventListener('change', () => {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    document.body.classList.contains('dark') ? document.querySelector('#switcher').classList.add('fa-sun') : document.querySelector('#switcher').classList.add('fa-moon');
-    document.body.classList.contains('dark') ? document.querySelector('#switcher').classList.remove('fa-moon') : document.querySelector('#switcher').classList.add('fa-sun');
+    document.querySelector('#switcher').classList.toggle('fa-moon')
+    document.querySelector('#switcher').classList.toggle('fa-sun')
+    savePreferences()
   });
 
 }
@@ -43,16 +70,16 @@ function formContact() {
   const contactBtn = document.querySelector('#contactBtn');
   contactBtn.addEventListener('click', hideForm);
   const closeBtn = document.querySelector('#close-form');
-  closeBtn.addEventListener('click',hideForm)
+  closeBtn.addEventListener('click', hideForm)
   const containerForm = document.querySelector('.contact-container');
   containerForm.addEventListener('click', (ev) => {
-    if(ev.target === containerForm) {
+    if (ev.target === containerForm) {
       hideForm()
     }
   })
 }
 
-function hideForm () {
+function hideForm() {
   const contactContainer = document.querySelector('.contact-container');
   contactContainer.classList.toggle('form-hidden');
 }
@@ -73,5 +100,5 @@ function scrollHeader() {
   };
 }
 
-export { init };  
+export { init };
 
