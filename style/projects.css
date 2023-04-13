@@ -110,7 +110,8 @@
 .projects-container 
 .container-cards-projects 
 .card-project p.project-description {
-  min-height: 120px;
+  height: 100px;
+  overflow-y: auto;
   width: 100%;
   font-size: 14px;
   padding-right: 20px;
