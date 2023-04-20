@@ -208,6 +208,32 @@ body {
   animation-name: dot3_;
 }
 
+.btn-wpp {
+  z-index: 1;
+  width: 50px;
+  position: fixed;
+  fill: #2cb842;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  animation-name: wpp-btn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wpp-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes dot1_ {
   3%,97% {
     width: 160px;
@@ -470,34 +496,8 @@ header{
   text-transform: uppercase;
 }
 
-.btn-wpp {
-  z-index: 1;
-  width: 50px;
-  position: fixed;
-  fill: #2cb842;
-  bottom: 0;
-  right: 0;
-  margin: 20px;
-  animation-name: wpp-btn;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
 .form-hidden{
   display: none;
-}
-
-@keyframes wpp-btn {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 @media (min-width: 800px) {
