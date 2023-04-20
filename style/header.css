@@ -294,6 +294,7 @@ footer {
 
 header{
   background-color: var(--color-header);
+  backdrop-filter: blur(10px);
   transition: 400ms linear;
   position: fixed;
   top: -150px;
@@ -469,15 +470,34 @@ header{
   text-transform: uppercase;
 }
 
-
-.form-contact-container
 .btn-wpp {
-  color: #6B7280;
-  
+  z-index: 1;
+  width: 50px;
+  position: fixed;
+  fill: #2cb842;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  animation-name: wpp-btn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .form-hidden{
   display: none;
+}
+
+@keyframes wpp-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (min-width: 800px) {

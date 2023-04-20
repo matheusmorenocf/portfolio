@@ -154,12 +154,18 @@ main section {
 .technology-container .list-technology ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 80px;
+  justify-content: center;
 }
 
-.technology-container .list-technology ul li .technology i {
-  font-size: 80px;
+.technology-container .list-technology ul li .technology {
+  display: block;
+}
+
+.technology-container .list-technology ul li .technology svg {
+  height: 80px;
+  fill: var(--color-title);
+
 }
 
 .see-more {
