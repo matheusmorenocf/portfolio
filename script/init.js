@@ -61,8 +61,8 @@ function switchTheme() {
   themeButton.addEventListener('change', () => {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    document.querySelector('#switcher').classList.toggle('fa-moon')
     document.querySelector('#switcher').classList.toggle('fa-sun')
+    document.querySelector('#switcher').classList.toggle('fa-moon')
     savePreferences()
   });
 
