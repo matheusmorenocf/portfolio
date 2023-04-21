@@ -97,6 +97,10 @@ body.light {
   padding: 0;
   color: inherit;
   font: inherit;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* padrão */
 }
 
 a {
@@ -171,6 +175,15 @@ body {
 }
 
 /* Loader */
+
+.indicator {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: var(--color-secondary);
+}
 
 .loader {
   position: absolute;
@@ -513,7 +526,7 @@ header{
   header{
     padding: 20px 25px;
     height: 220px;
-    top: -200px;
+    top: -220px;
   }
 
   footer {

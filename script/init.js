@@ -9,6 +9,7 @@ function init() {
   switchTheme();
   formContact();
   scrollHeader();
+  scrollIndicator();
 }
 
 function getPreferences() {
@@ -35,17 +36,24 @@ function savePreferences() {
 function loader() {
   window.addEventListener("load", showLoader);
   window.addEventListener("load", hideLoader);
-  // window.addEventListener("scroll", updateLoaderPosition);
-
 }
 
-// function updateLoaderPosition() {
-//   const loader = document.querySelector("#loader");
-//   const windowTop = window.pageYOffset || document.documentElement.scrollTop;
-//   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-//   const loaderHeight = loader.offsetHeight;
-//   loader.style.top = (windowTop + (windowHeight / 2) - (loaderHeight / 2)) + "px";
-// }
+function scrollIndicator () {
+  window.addEventListener('scroll', updateWidthIndicator)
+} 
+
+function updateWidthIndicator() {
+    const indicator = document.querySelector('.indicator');
+    const maxHeight = document.body.scrollHeight - window.innerHeight;
+    const percent = (window.scrollY/maxHeight) * 100;
+    indicator.style.width = `${percent}%`;
+    indicator.addEventListener('mouseenter', () => {
+      if(!document.querySelector('header').classList.contains('visible')){
+        document.querySelector('header').classList.add('visible')
+      }    
+      })
+              
+}
 
 function showLoader() {
   document.querySelector("#loader").style.display = "block";
@@ -84,9 +92,6 @@ function hideForm() {
   const contactContainer = document.querySelector('.contact-container');
   contactContainer.classList.toggle('form-hidden');
 }
-
-
-
 
 function scrollHeader() {
   let prevScrollpos = window.pageYOffset;
