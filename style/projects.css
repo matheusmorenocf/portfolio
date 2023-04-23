@@ -13,7 +13,7 @@
 }
 
 .projects-container 
-.projects-title-content h2 {
+.projects-title-content .title-project {
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: bold;
